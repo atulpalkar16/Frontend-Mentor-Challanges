@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --voiletBorder: hsla(256.6, 63.16%, 80%, 1);
+    --voilet: hsl(263, 55%, 52%);
+    --grayBlue: hsl(217, 19%, 35%);
+    --darkBlue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+
+    --Lightgray: hsl(0, 0%, 81%);
+    --skyblue: hsl(210, 46%, 95%);
+
+    --fw-dark: 600;
+    --fw-normal: 500;
+}
+body {
+    background-color: var(--skyblue);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    Font-size: 13px;
+    line-height: 1.5;
+    height: 100vh;
+
+    display: grid;
+    align-items: center;
+}
+
+/* global */
+.container{
+    width: 90%;
+    margin:0 auto;
+}
+.cards{
+    max-width: 1150px;
+    margin: 2rem auto;
+}
+h1,h2,h3,h4,h5,p {
+    word-wrap: break-word;
+}
+img{
+    display: block;
+    max-width: 100%;
+    border-radius: 50%;
+}
+.card  .circle img{
+    border: -5px solid var(--voilet) ;
+}
+
+/* cards */
+.name{
+    font-size: 16px;
+    font-weight: var(--fw-dark);
+}
+.role {
+    font-size: 13px;
+    opacity: 50%;
+}
+/* card-body */
+.card-body .bold-text{
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+.card-body .light-text{
+    line-height: 1.5;
+    opacity: 70%;
+}
+
+
+/* background */
+.bg-voilet{
+    background: url(images/bg-pattern-quotation.svg) no-repeat 80% 0 var(--voilet);
+    color: var(--White);
+}
+.bg-grayBlue{
+    background-color: var(--grayBlue);
+    color: var(--White);
+}
+.bg-darkBlue{
+    background-color: var(--darkBlue);
+    color: var(--White);
+}
+.bg-white{
+    background-color: var(--White);
+}
+
+/* utility */ 
+.card{ 
+    /* background-color: #fff; */
+    border-radius: .5rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .24);
+    padding: 30px 40px ;
+    width: 100%;
+}
+.flex{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.grid{
+    display: grid;
+    gap: 1rem;
+}
+
+
+
+/* media */
+@media(min-width: 768px){
+    .grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .grid > *:last-child{
+        grid-column: 1 / span 2;
+    }
+}
+@media(min-width: 990px){
+    .grid{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .span-2{
+        grid-column: 1 / span 2;
+    }
+    /* position */
+    .grid > *:nth-child(4){
+        grid-column-start: 2;
+    }
+    .grid > *:last-child{
+        grid-row: 1/ span 2 ;
+        grid-column: 4;
+    }
+}
+
+/* circle */
+.circle{
+    border: 2px solid var(--voiletBorder);
+}
+.circle-1{
+    border: 2px solid var(--voilet);
+}
