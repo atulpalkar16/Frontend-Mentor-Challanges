@@ -50,7 +50,7 @@ body {
   letter-spacing: 5px;
   margin-top: 1rem;
 }
-.new-price{
+.pricing .new-price{
   color: var(--rolex);
 }
 .old-price{
