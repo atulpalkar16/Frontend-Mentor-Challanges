@@ -13,7 +13,7 @@ Users should be able to:
 ![Fylo landing page](./images/Fylo-webpage-ss.png)
 
 ### Links
-Live Deployed Site: https://fylo-landingpage-frontendmentor-atool.netlify.app/
+Live Deployed Site: 
 
 ## My process
 
